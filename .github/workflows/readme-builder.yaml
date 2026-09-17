@@ -5,9 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # Runs automatically every 24 hours to capture new project updates
     - cron: '0 0 * * *'
-  workflow_dispatch: # Allows you to manually trigger it anytime
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -16,14 +15,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Generate Dynamic Content
-        uses: gautamkrishnar/blog-post-workflow@master
-        # Note: If using GitSkins-specific scripts, update this step to run your specific compilation build command
+        uses: sarisia/actions-readme-feed@v1
+        with:
+          # This specifies your input template and your live README output target
+          file: 'README.md'
+          template: 'README.template.md'
+          # This pulls your pinned or active public repositories directly into the template
+          types: 'repo'
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
