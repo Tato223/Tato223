@@ -15,14 +15,49 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Generate Dynamic Content
-        uses: sarisia/actions-readme-feed@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # This specifies your input template and your live README output target
-          file: 'README.md'
-          template: 'README.template.md'
-          # This pulls your pinned or active public repositories directly into the template
-          types: 'repo'
+          node-version: '20'
+
+      - name: Run README Compiler Script
+        env:
+          GITHUB_USER: \${{ github.repository_owner }}
+        run: |
+          npm install handlebars axios
+          node - e "
+          const fs = require('fs');
+          const Handlebars = require('handlebars');
+          const axios = require('axios');
+
+          async function run() {
+            try {
+              // Fetch user's public repositories from GitHub API
+              const res = await axios.get(\`https://github.com\${process.env.GITHUB_USER}/repos?sort=updated&per_page=5\`);
+              const projects = res.data.map(r => ({
+                name: r.name,
+                description: r.description || 'No description provided.',
+                html_url: r.html_url,
+                stack: r.language || 'Markdown'
+              }));
+
+              // Read the template file
+              const templateSource = fs.readFileSync('README.template.md', 'utf8');
+              const template = Handlebars.compile(templateSource);
+
+              // Inject projects data into BOTH naming variations to prevent errors
+              const result = template({ currentProjects: projects, repo: projects });
+
+              // Write the compiled contents to README.md
+              fs.writeFileSync('README.md', result);
+              console.log('README compiled successfully!');
+            } catch (err) {
+              console.error(err);
+              process.exit(1);
+            }
+          }
+          run();
+          "
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
