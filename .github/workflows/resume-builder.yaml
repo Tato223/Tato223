@@ -1,0 +1,32 @@
+name: Build Profile README
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Runs automatically every 24 hours to capture new project updates
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows you to manually trigger it anytime
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Dynamic Content
+        uses: gautamkrishnar/blog-post-workflow@master
+        # Note: If using GitSkins-specific scripts, update this step to run your specific compilation build command
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: automated README update with latest projects"
+          file_pattern: 'README.md'
