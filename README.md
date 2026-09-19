@@ -1,67 +1,41 @@
----
-# 🚀 Dante | Software Engineer
+ <h1 align="center">
+   Hi, I'm Dante! 👋🏾
+ </h1>
 
-## 👨‍💻 About Me
-I'm a college student studying Computer Science and pursuing a career in Software Engineering
+ <h3 align="center">
+   Web Developer 💻| Software Engineer 🛠| Marching Band Enthusiast 🎶| Kappa Kappa Psi 🤟🏾
+ </h3>
 
-## 🔧 Current Work
-- 🔭 Working on: Building an Ear training web application, a ranked-level list, and a professional website
-- 🌱 Learning: TypeScript, Tone.js
-- - 📍 Location: Maryland
+ ---
 
-## 🌐 Contact
-- 📧 Email: travis.dante23@gmail.com
-- 🌍 Website: [Your website]
+ <p align="center">
+   I'm a junior computer science major pursuing a career in software engineering. My current projects explore full-stack web development, RESTful API design, relational databases, and backend security practices. 
+ </p>
 
-## ✨ Fun Fact
-I am a drum major in an HBCU marching band
+ <br/>
 
----
+ > ## My Tech Stack 🧰
+**Languages:** Python | TypeScript | JavaScript | SQL | HTML / CSS | C#
 
-## 🛠️ Tech Stack
-<div align="center">
-  [![My Skills](https://skillicons.dev/icons?i=js,ts,react,python,django,fastapi,sqlite,gcp,figma,git,github,vscode,postman)](https://skillicons.dev)
-<img src="https://img.shields.io/badge/[Your this]-informational?style=for-the-badge&logo=[Your this]&logoColor=white" alt="[Your this] badge" />
-{{/each}}
-</div>
+**Frameworks & Libraries:** FastAPI | React | Django
 
----
+**Cloud Platforms:** GCP | Vercel | Netlify
 
-## 🚀 Projects
-{{#each currentProjects}}
-### 🔹 [{{this.name}}]({{this.link}})
-> {{this.description}}
+**Additional Skills:** Unity | Figma | Paint.net
 
-**Tech Stack:** {{this.stack}}
-{{/each}}
+<br/>
 
----
+ > ## Current Projects 🔧
+- **EarTrainer** | A web application that provides ear training exercises for collegiate musicians built with TypeScript, React, and Django
+- **Priora** | A simple task manager application made to explore RESTful API architecture and DOM manipulation, built with Python, FastAPI, HTML, CSS, and JavaScript
+- **Nox List** | A pointercrate-like ranked level list that displays Geometry Dash levels in order of difficulty
 
-## 📈 GitHub Stats
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Tato223&show_icons=true&theme=tokyonight" alt="Stats" />
-<img src="https://github-readme-streak-stats.herokuapp.com?user=Tato223&theme=tokyonight" alt="Streak" />
-</div>
+<br/>
 
----
+> ## Contact Me 📞
 
-## 🏆 GitHub Trophies
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Tato223&theme=tokyonight&row=2&column=4" />
-</div>
+**Email:** travis.dante23@gmail.com <br/>
+**Website:** Under Construction 🚧 <br/>
+**LinkedIn:** [My LinkedIn](https://www.linkedin.com/in/dante-travis-4745b4297/)
 
----
 
-## 📊 Activity Graph
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Tato223&theme=tokyo-night&area=true" />
-</div>
-
----
-
-## 🌟 Quote to Live By
-<div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&width=600&height=50&lines=Code+with+purpose.+Learn+with+curiosity!"/>
-</div>
-
----
