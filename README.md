@@ -15,9 +15,9 @@
  <br/>
 
  > ## My Tech Stack 🧰
-**Languages:** Python | TypeScript | JavaScript | SQL | HTML / CSS | C#
+**Languages:** Python | TypeScript | JavaScript | SQL | HTML / CSS | C# | PHP
 
-**Frameworks & Libraries:** FastAPI | React | Django
+**Frameworks & Libraries:** FastAPI | React | Django | SQLModel | Laravel | Blade
 
 **Cloud Platforms:** GCP | Vercel | Netlify
 
